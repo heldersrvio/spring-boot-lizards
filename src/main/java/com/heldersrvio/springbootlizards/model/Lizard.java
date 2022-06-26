@@ -1,4 +1,4 @@
-package com.helder.springbootlizards.model;
+package com.heldersrvio.springbootlizards.model;
 
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;

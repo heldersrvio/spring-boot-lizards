@@ -1,4 +1,4 @@
-package com.helder.springbootlizards;
+package com.heldersrvio.springbootlizards;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,13 +1,10 @@
-package com.helder.springbootlizards.config;
+package com.heldersrvio.springbootlizards.config;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.amazonaws.services.dynamodbv2.datamodeling.ConversionSchema;
-import com.amazonaws.services.dynamodbv2.datamodeling.ConversionSchemas;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
-import com.helder.springbootlizards.repository.LizardRepository;
-import org.socialsignin.spring.data.dynamodb.mapping.DynamoDBMappingContext;
+import com.heldersrvio.springbootlizards.repository.LizardRepository;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +22,7 @@ public class DynamoDBConfig {
     @Bean
     @Primary
     public DynamoDBMapperConfig dynamoDBMapperConfig() {
-        return DynamoDBMapperConfig.builder().withConversionSchema(ConversionSchemas.V2_COMPATIBLE).build();
+        return DynamoDBMapperConfig.DEFAULT;
     }
 
     @Bean

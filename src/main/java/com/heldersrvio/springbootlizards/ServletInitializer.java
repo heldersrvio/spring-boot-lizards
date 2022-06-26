@@ -1,4 +1,4 @@
-package com.helder.springbootlizards;
+package com.heldersrvio.springbootlizards;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
