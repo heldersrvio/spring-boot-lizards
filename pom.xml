@@ -11,7 +11,7 @@
 	<groupId>com.heldersrvio</groupId>
 	<artifactId>spring-boot-lizards</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>spring-boot-lizards</name>
 	<description>Demo project for Spring Boot</description>
 	<dependencies>
