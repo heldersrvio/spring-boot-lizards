@@ -8,7 +8,7 @@ import java.util.Date;
 public class GenerateJWTToken {
     static final String SECRET = System.getenv("JWT_SECRET");
     static final long EXPIRATION_TIME = 7 * 24 * 60 * 60;
-    private static String JWTGenerate(){
+    public static String JWTGenerate(){
         return Jwts.builder()
                 .setSubject("user")
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))

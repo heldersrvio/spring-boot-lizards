@@ -3,30 +3,20 @@ package com.heldersrvio.springbootlizards;
 import com.heldersrvio.springbootlizards.control.LizardController;
 import com.heldersrvio.springbootlizards.model.Lizard;
 import com.heldersrvio.springbootlizards.repository.LizardRepository;
-import com.heldersrvio.springbootlizards.security.JWTAuthorizationFilter;
-import com.heldersrvio.springbootlizards.security.TokenAuthenticationService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.http.MediaType;
 import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -35,8 +25,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(
@@ -48,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 				SecurityAutoConfiguration.class, SecurityFilterAutoConfiguration.class
 		}
 )
-class SpringBootLizardsApplicationTests {
+class SpringBootLizardsApplicationUnitTests {
 
 	@Autowired
 	private MockMvc mockMvc;
